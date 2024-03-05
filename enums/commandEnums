@@ -1,0 +1,27 @@
+const CommandEnum = Object.freeze({
+    CHECK_IN: "Q0",         // The check-in command will be sent lock first after each connection to the server (including reconnecting after disconnection)
+    HEARTBEAT: "H0",        // Heartbeat command is sent lock every 4 minutes to maintain connection
+    UNLOCKING_LOCK: "R0",   // Unlocking/Lock , Command Request an unlock/lock action
+    UNLOCK : "L0",          // Unlock , Open command Send command R0 before sending this command
+    LOCK : "L1",            // Lock the scooter command Send the R0 command before sending this command
+    DEVICE_SETTING_INSTRUCTION : "S5", // IoT device setup instructions 
+    GET_DEVICE_INFO : "S6", // Get scooter information
+    SETTING_INSTRUCTION_1 : "S7", // Scooter adjustment instruction 1
+    SETTING_INSTRUCTION_2 : "S4", // Scooter adjustment instruction 2
+    BEEP_PLAYBACK : "V0", //  Beep play command
+    GET_POSITIONING_INSTRUCTION_ST : "D0", //  Get positioning instructions in one go
+    POSITIONING_TRACKING_INSTRUCTION : "D1", //  Location tracking instruction
+    GET_FW_VERSION : "G0", //  Get the firmware version
+    UPLOAD_CONTROLLER_FAUL_CODE : "E0", // Upload controller fault code
+    DETECT_UPGRADE_BOOT_UPGRADE : "U0", // Detect upgrade/boot upgrade
+    GET_UPGRADE_DATA : "U1", //  Get upgrade data
+    NOTIFICATION_OF_UPGRADE_SUCCESSFULLY : "U2", //  Notification of upgrade successfully
+    SETTING_GETTING_BLE_KEY : "K0", //   Setting/Getting BLE 8-byte communication KEY
+
+
+
+    EVENT_NOTIFICATION : "S1", // Eventnotification
+    UNLOCK_EXTERNAL_DEVICES : "L5", // Unlock external devices 
+  });
+  
+  module.exports = CommandEnum;

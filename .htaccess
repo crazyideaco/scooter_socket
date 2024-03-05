@@ -1,0 +1,13 @@
+### Rewrite Rules Added by CyberPanel Rewrite Rule Generator
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}  !-f
+RewriteRule ^/?(.*) https://scooter.crazyidea.online:3003/$1 [R,L]
+
+### End CyberPanel Generated Rules.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteRule ^(.*)$ http://scooter.crazyidea.online:3003/$1 [P,L]
+</IfModule>
